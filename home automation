@@ -33,7 +33,7 @@ void setup()
   pinMode(Relay4,OUTPUT);
 
   digitalWrite(Relay1,LOW);
- digitalWrite(Relay2,LOW);
+  digitalWrite(Relay2,LOW);
   digitalWrite(Relay3,LOW);
   digitalWrite(Relay4,LOW);
 
@@ -128,7 +128,7 @@ void loop()
       Serial.println("light 4 OFF");
     }  
 
- float h = dht.readHumidity();
+  float h = dht.readHumidity();
   float t = dht.readTemperature();  
   Firebase.setFloat ("Temp",t);
   Firebase.setFloat ("Humidity",h);
